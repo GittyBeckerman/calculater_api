@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "27591dcd-4dd8-455b-82e1-867824871e35",
+		"name": "calculater",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24080193"
+	},
+	"item": [
+		{
+			"name": "GetToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\" : \"Gitty\",\r\n    \"Password\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIxMjM0NSI6IkdpdHR5IiwibmJmIjoxNzIxMDU5MzMzLCJleHAiOjE3MjEwNjA1MzMsImlhdCI6MTcyMTA1OTMzM30.erhgbHpLaPkoAFLAgyCt-pRW1h4mqXOnEN97dihWaeo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "number1",
+						"value": "5",
+						"type": "text"
+					},
+					{
+						"key": "number2",
+						"value": "2",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/calculate/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"calculate",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subtract",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIxMjM0NSI6IkdpdHR5IiwibmJmIjoxNzIxMDU5MzMzLCJleHAiOjE3MjEwNjA1MzMsImlhdCI6MTcyMTA1OTMzM30.erhgbHpLaPkoAFLAgyCt-pRW1h4mqXOnEN97dihWaeo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "number1",
+						"value": "5",
+						"type": "text"
+					},
+					{
+						"key": "number2",
+						"value": "20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/calculate/subtract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"calculate",
+						"subtract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "divide",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIxMjM0NSI6IkdpdHR5IiwibmJmIjoxNzIxMDU5MzMzLCJleHAiOjE3MjEwNjA1MzMsImlhdCI6MTcyMTA1OTMzM30.erhgbHpLaPkoAFLAgyCt-pRW1h4mqXOnEN97dihWaeo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "number1",
+						"value": "5",
+						"type": "text"
+					},
+					{
+						"key": "number2",
+						"value": "20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/calculate/divide",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"calculate",
+						"divide"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "multiply",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIxMjM0NSI6IkdpdHR5IiwibmJmIjoxNzIxMDU5MzMzLCJleHAiOjE3MjEwNjA1MzMsImlhdCI6MTcyMTA1OTMzM30.erhgbHpLaPkoAFLAgyCt-pRW1h4mqXOnEN97dihWaeo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "number1",
+						"value": "5",
+						"type": "text"
+					},
+					{
+						"key": "number2",
+						"value": "20",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/calculate/multiply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"calculate",
+						"multiply"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
